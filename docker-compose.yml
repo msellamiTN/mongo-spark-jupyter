@@ -24,7 +24,7 @@ services:
     image: bde2020/spark-master
     container_name: spark-master
     ports:
-      - 8082:8080
+      - 8083:8080
       - 7077:7077
     volumes:
       - shared-workspace:/opt/workspace
@@ -38,7 +38,7 @@ services:
       - SPARK_WORKER_CORES=2
       - SPARK_WORKER_MEMORY=1g
     ports:
-      - 8082:8081
+      - 8084:8081
     volumes:
       - shared-workspace:/opt/workspace
     depends_on:
@@ -50,7 +50,7 @@ services:
       - SPARK_WORKER_CORES=2
       - SPARK_WORKER_MEMORY=1g
     ports:
-      - 8083:8081
+      - 8085:8081
     volumes:
       - shared-workspace:/opt/workspace
     depends_on:
